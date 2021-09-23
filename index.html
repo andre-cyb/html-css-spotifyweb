@@ -21,11 +21,26 @@
             <!-- sidebar content -->
             <div class="float container-sidebar">
                 <div class="sidebar-upper-section">
-                    <div class="logo"><img src="img/logo-small.svg" alt=""></div>
+                    <div class="logo"><img class="mobile-logo" src="img/logo-small.svg" alt=""><img class="big-logo display-none" src="img/logo.svg" alt=""></div>
                     <ul>
-                        <li><a href=""><img class="sidebar-icon" src="img/home.svg" alt=""></a></li>
-                        <li><a href=""><img class="sidebar-icon" src="img/search.svg" alt=""></a></li>
-                        <li><a href=""><img class="sidebar-icon" src="img/libreria.svg" alt=""></a></li>
+                        <li>
+                            <img class="sidebar-icon" src="img/home.svg" alt="">
+                            <a class="display-none"href="">
+                                <span ><h4>Home</h4></span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="sidebar-icon" src="img/search.svg" alt="">
+                                <span class="display-none">Cerca</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <img class="sidebar-icon" src="img/libreria.svg" alt="">
+                                <span class="display-none">La tua libreria</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
                 <div class="sidebar-center-section display-none">
@@ -136,7 +151,7 @@
                     </div>
                 </div>
                 <!-- fine copertine album -->
-                
+
             </div>
         </div>
     </main>
@@ -146,14 +161,19 @@
 
             <div class="footer-left-section">
                 <div class="left-section-img-song"> 
-                    <img src="img/sinister.jpeg" alt="">
+                    <div>
+                        <img src="img/sinister.jpeg" alt="">
+                    </div>
                 </div>
                 <div class="left-section-author">
                     <div><h4>Sinister</h4></div>
                     <div><span>nome brano</span></div>
                 </div>
                 <div class="left-section-icons">
-                    <span><img src="img/" alt=""></span>
+                    <div>aa
+                        <i class="far fa-heart"></i>
+                        <i class="far fa-folder"></i>
+                    </div>  
                 </div>
             </div>
             <div class="footer-center-section">
