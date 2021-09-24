@@ -49,7 +49,6 @@ footer{
     height: calc(100vh - 70px);
     overflow: auto;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
@@ -64,6 +63,7 @@ footer{
 /* sidebar css */
 .mobile-logo{
     width:38px;
+    padding: 10px 0px;
 }
 a{
     display: inline-block;
@@ -100,12 +100,15 @@ ul{
 
 .sidebar-lower-section{
     width:100%;
+    display: flex;
+    justify-content: center;
 }
 .sidebar-lower-section li{
     margin: 10px 0px;
 }
-.download-section{
-    border-bottom: 1px solid grey;
+.sidebar-lower-section hr{
+    width: 20%;
+    color: grey;
 }
 .account-section h4{
     display: inline-block;
@@ -194,7 +197,6 @@ h4 ~ span{
 .footer-left-section{
     display: flex;
     align-items: center;
-    border: 1px solid orange;
     width: 25%;  
 }
 .footer-center-section{
@@ -203,14 +205,11 @@ h4 ~ span{
     flex-direction: column;
     justify-content: center;
     flex-wrap: wrap;
-    border: 1px solid orange;
 }
 .footer-right-section{
     display: flex;
     align-items: center;
-    border: 1px solid orange;
     width: 25%;  
-
 }
 
 /* footer left section */
@@ -243,13 +242,19 @@ h4 ~ span{
 .center-panel-control{
     width: 100%;
     text-align: center;
-
+}
+.center-panel-control span{
+    padding: 0px 5px;
+}
+.fa-play-circle{
+    font-size: 22px;
+    padding: 0px 5px;
 }
 .bar span{
     font-size: 12px;
 }
 .play-bar{
-    height: 2px;
+    height: 4px;
     width: 60%;
     border-radius: 2px;
     background-color: grey;
@@ -257,6 +262,24 @@ h4 ~ span{
     vertical-align: middle;
 }
 
+
+/* footer right section */
+.footer-right-section i{
+    font-size: 12px;
+    padding: 0px 2px;
+}
+.footer-right-section > div{
+    width: 100%;
+    text-align: center;
+}
+.volume-bar{
+    height: 4px;
+    width: 40%;
+    border-radius: 2px;
+    background-color: grey;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 
 /* mobile 
@@ -282,6 +305,9 @@ h4 ~ span{
         align-items: flex-start;
         padding-left: 20px;
     }
+    .sidebar-lower-section{
+        justify-content: flex-start;
+    }
     .container-spotify-content{
         width: calc(100% - 200px);
         
@@ -297,7 +323,7 @@ h4 ~ span{
     }
     .big-logo{
         width: 120px;
-        padding: 10px 0px;
+        padding: 10px 0px 13px 0px;
     }
 }
 @media screen and (min-width: 680px){
