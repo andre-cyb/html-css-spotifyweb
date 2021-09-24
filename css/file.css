@@ -62,38 +62,55 @@ footer{
 }
 
 /* sidebar css */
-.sidebar-upper-section ul{
-    list-style-type: none;
-}
-.sidebar-upper-section span{
+a{
     display: inline-block;
-}
-.sidebar-upper-section a{
     text-decoration: none;
+}
+ul{
+    list-style-type: none;
 }
 .sidebar-center-section{
     flex-grow: 1;
+    overflow: auto;
 }
-.sidebar-lower-section ul{
-    list-style-type: none;
-}     
-.sidebar-lower-section img{
-    text-align: center;
-}     
-.logo .mobile-logo{
-    width: 35px;
+.sidebar-center-section h3{
     padding: 10px 0px;
 }
+.sidebar-center-section li{
+    padding: 7px 0px;
+}
+
 .sidebar-icon{
     width: 30px;
+}
 
+
+.container-playlist{
+    height: 100%;
+    padding: 20px 0px;
 }
-.sidebar-lower-section .dowload{
-    width: 20px;
+.container-playlist i{
+    font-size: 40px;
+    vertical-align: middle;
 }
-.sidebar-lower-section .account{
-    width: 20px;
+
+
+.sidebar-lower-section{
+    width:100%;
 }
+.sidebar-lower-section li{
+    margin: 10px 0px;
+}
+.download-section{
+    border-bottom: 1px solid grey;
+}
+.account-section h4{
+    display: inline-block;
+}
+
+.sidebar-lower-section .download{
+}
+
 
 /* fine sidebar css */
 /*  */
@@ -231,6 +248,10 @@ h4 ~ span{
    ipad mini 550 
    ipad pro 680 
    desktop 920  */
+  /*  Florian
+   fino 600 mobile
+   fino 700 tablet
+   fino 1000 desk */
 
 
 
