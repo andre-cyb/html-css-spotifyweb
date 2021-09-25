@@ -10,14 +10,21 @@
     display: table;
     clear: both;
 }
+ul{
+    list-style-type: none;
+}
 h2, h4{
     color: white;
 }
 h4{
-    font-size: 10px;
+    font-size: 11px;
 }
 h2{
     font-size: 20px;
+}
+a:hover{
+    color: white;
+    transition: all .2s ease-in-out;
 }
 
 main{
@@ -31,17 +38,13 @@ footer{
 }
 
 
-/* main */
+/****** main ******/
 .display-none{
     display: none;
 }
-.main-container{
-    height: 100%;
-    width: 100%;  
-}
+
 .float{
     float:left;
-    height: 100%;
 }
 .container-sidebar{
     width: 70px;
@@ -60,7 +63,7 @@ footer{
     overflow: auto;
 }
 
-/* sidebar css */
+        /* sidebar css */
 .mobile-logo{
     width:38px;
     padding: 10px 0px;
@@ -68,10 +71,21 @@ footer{
 a{
     display: inline-block;
     text-decoration: none;
+    font-size: 10px;
+    color: rgb(168, 168, 168);
 }
-ul{
-    list-style-type: none;
+
+/* sidebar upper section */
+.sidebar-upper-section li{
+    padding: 5px 0px;
 }
+.sidebar-icon{
+    width: 25px;
+    vertical-align: middle;
+}
+/* fine sidebar upper section */
+
+/* sidebar center */
 .sidebar-center-section{
     flex-grow: 1;
     overflow: auto;
@@ -82,13 +96,6 @@ ul{
 .sidebar-center-section li{
     padding: 7px 0px;
 }
-
-.sidebar-icon{
-    width: 30px;
-    vertical-align: middle;
-}
-
-
 .container-playlist{
     height: 100%;
     padding: 20px 0px;
@@ -96,16 +103,29 @@ ul{
 .container-playlist i{
     font-size: 40px;
     vertical-align: middle;
+    padding-right: 5px;
+}
+.container-playlist .add-playlist{
+    font-size: 16px;
 }
 .container-playlist div{
     
     padding: 10px 0px;
 }
+/* fine sidebar center */
+
+
+
+
+
+
 
 
 .sidebar-lower-section{
-    width:100%;
-    
+    width:100%; 
+}
+.sidebar-lower-section span{
+    font-size: 9px;
 }
 .sidebar-lower-section li{
     margin: 10px 0px;
@@ -115,15 +135,16 @@ ul{
     width: 100%;
     color: grey;
 }
-.account-section h4{
-    display: inline-block;
+.account-section span{
+    font-size: 11px;
+    font-weight: bold;
 }
 
-.download-icon{
+.download-icon, .account-icon{
     width: 20px;
+    vertical-align: middle;
 }
 .account-icon{
-    width: 20px;
     background-color: grey;
     border-radius: 50%;
 }
@@ -154,6 +175,7 @@ ul{
     text-align: center;
     list-style-type: none;
     width: 100%;
+    padding: 10px;
 }
 .nav-bar li{
     display: inline-block;
@@ -163,7 +185,18 @@ ul{
     text-decoration: none;
     color: #878787;
     font-size: 10px;
+    font-weight: bold;
     padding: 5px;
+    position: relative;
+}
+.active::after{
+    content: "";
+    height: 2px;
+    background-color: #ADFF2F;
+    width: 40px;
+    left: calc(50% - 20px);
+    position: absolute;
+    bottom: 0px;
 }
 .main-container-recently-played, 
 .main-container-created-for, 
@@ -188,11 +221,27 @@ h4 ~ span{
 .container-card-song{
     text-align: center;
     width: calc(100% / 2 - 7px);
+    position: relative;
 }
 .disc-cover img{
     width: 100%;
-
 }
+/* .disc-cover{
+    position: relative;
+} */
+/* .overlay-card::after {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+}
+.disc-cover:hover .overlay-card::after{
+    opacity: .2;
+} */
 .main-container-popular-artist .disc-cover img{
     border-radius: 50%;
 }
@@ -271,6 +320,17 @@ h4 ~ span{
     background-color: grey;
     display: inline-block;
     vertical-align: middle;
+    position: relative;
+}
+.play-bar::after{
+    content: "";
+    height: 4px;
+    width: 30%;
+    border-radius: 2px;
+    background-color: #c1c1c1;
+    position: absolute;
+    bottom: 0px;
+    left: 0;
 }
 
 
@@ -282,6 +342,7 @@ h4 ~ span{
 .footer-right-section > div{
     width: 100%;
     text-align: center;
+    flex-basis: auto;
 }
 .volume-bar{
     height: 4px;
@@ -290,6 +351,17 @@ h4 ~ span{
     background-color: grey;
     display: inline-block;
     vertical-align: middle;
+    position: relative;
+}
+.volume-bar::after{
+    content: "";
+    height: 4px;
+    width: 20%;
+    border-radius: 2px;
+    background-color: #c1c1c1;
+    bottom: 0;
+    left: 0;
+    position: absolute;
 }
 
   /*  Florian
@@ -298,51 +370,55 @@ h4 ~ span{
    fino 1000 desk */
 
 
-   @media screen and (max-width: 549px){
-       .hide-on-mobile{
-           display: none;
-       }
-       .sidebar-lower-section li {
-        text-align: center;
-        }
-    }  
+@media screen and (max-width: 549px){
+    .hide-on-mobile{
+        display: none;
+    }
+    .sidebar-lower-section li {
+    text-align: center;
+    }
+}  
     
     
-    @media screen and (min-width: 550px){
-        .container-sidebar{
-            width: 200px;
-            align-items: flex-start;
-            padding: 0px 20px;
-        }
-        .sidebar-lower-section li{
-            text-align: left;
-        }
-        .container-spotify-content{
-            width: calc(100% - 200px);
-            
-        }
-        .container-card-song{
-            width: calc(100% / 2 - 7px);
-        }
-        .display-none{
-            display: block;
-        }
-        .mobile-logo{
-            display: none;
-        }
-        .big-logo{
-            width: 120px;
-            padding: 10px 0px 13px 0px;
-        }
-        .dowload-icon span, .account-icon span{
-            display: inline-block;
-        }
+@media screen and (min-width: 550px){
+    .container-sidebar{
+        width: 200px;
+        align-items: flex-start;
+        padding: 0px 20px;
+    }
+    .sidebar-lower-section li{
+        text-align: left;
+    }
+    .container-spotify-content{
+        width: calc(100% - 200px);
+        
+    }
+    .container-card-song{
+        width: calc(100% / 2 - 7px);
+    }
+    .display-none{
+        display: block;
+    }
+    .mobile-logo{
+        display: none;
+    }
+    .big-logo{
+        width: 120px;
+        padding: 10px 0px 13px 0px;
+    }
+    .dowload-icon span, .account-icon span{
+        display: inline-block;
+    }
 }
 @media screen and (min-width: 680px){
     .container-sidebar{
         width: 200px;
         align-items: flex-start;
         padding: 0px 20px;
+    }
+    .nav-bar a{
+        font-size: 12px; 
+        padding: 5px 20px;
     }
     .container-spotify-content{
         width: calc(100% - 200px);
@@ -351,6 +427,9 @@ h4 ~ span{
     .container-card-song{
         width: calc(100% / 4 - 7px);
     }
+    h4{
+        font-size: 12px;
+    }
 }
 @media screen and (min-width: 920px){
     .container-sidebar{
@@ -358,11 +437,39 @@ h4 ~ span{
         align-items: flex-start;
         padding: 0px 20px;
     }
+    .nav-bar a{
+        font-size: 14px; 
+        padding: 5px 20px;
+    }
     .container-spotify-content{
         width: calc(100% - 200px);
         
     }
     .container-card-song{
-        width: calc(100% / 6 - 7px);
+        width: calc(100% / 6 - 9px);
+    }
+    .container-song{
+        gap: 9px;
+    }
+    
+    h4{
+        font-size: 13px;
+    }
+    h2{
+        font-size: 22px;
+        
+    }
+    .center-panel-control span{
+        padding: 0px 10px;
+        font-size: 20px;
+    }
+    .fa-play-circle {
+        font-size: 28px;
+        padding: 0px 5px;
+    }
+    .bar span{
+        padding: 0px 8px;
+        font-size: 14px;
+
     }
 }
