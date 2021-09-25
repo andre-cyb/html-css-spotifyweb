@@ -22,6 +22,9 @@ h4{
 h2{
     font-size: 20px;
 }
+a{
+    text-decoration: none;
+}
 a:hover{
     color: white;
     transition: all .2s ease-in-out;
@@ -114,13 +117,7 @@ a{
 }
 /* fine sidebar center */
 
-
-
-
-
-
-
-
+/* sidebar lower section */
 .sidebar-lower-section{
     width:100%; 
 }
@@ -148,9 +145,10 @@ a{
     background-color: grey;
     border-radius: 50%;
 }
+/* fine sidebar upper section */
 
+                /* fine sidebar css */
 
-/* fine sidebar css */
 /*  */
 .upgrade-now{
     text-align: right;
@@ -167,22 +165,19 @@ a{
     padding: 10px 30px;  
 }
 /*  */
+
 /* spotify album section*/
 .nav-bar{ 
     background-color:#141922;
 }
 .nav-bar ul{
     text-align: center;
-    list-style-type: none;
-    width: 100%;
     padding: 10px;
 }
 .nav-bar li{
-    display: inline-block;
-    
+    display: inline-block; 
 }
 .nav-bar a{
-    text-decoration: none;
     color: #878787;
     font-size: 10px;
     font-weight: bold;
@@ -211,7 +206,6 @@ a{
 h4 ~ span{
     font-size: 8px;
 }
-
 .container-song{
     display: flex;
     flex-wrap: wrap;
@@ -246,9 +240,6 @@ h4 ~ span{
     border-radius: 50%;
 }
 
-
-
-
 /* footer */
 .footer-container{
     height: 100%;
@@ -276,8 +267,9 @@ h4 ~ span{
 
 
 .left-section-img-song img{
-    width: 100%;
-    padding: 3px;
+    max-width: 40px;
+    max-height: 40px;
+    padding: 0px 7px;
 }
 .left-section-img-song{
     width: 30%;
@@ -294,9 +286,8 @@ h4 ~ span{
 .left-section-icons .far{
     font-size: 12px;
     display: block;
-    padding: 2px 0px;
+    padding: 5px ;
 }
-
 
 /* footer central section */
 .center-panel-control{
@@ -333,7 +324,6 @@ h4 ~ span{
     left: 0;
 }
 
-
 /* footer right section */
 .footer-right-section i{
     font-size: 12px;
@@ -364,11 +354,6 @@ h4 ~ span{
     position: absolute;
 }
 
-  /*  Florian
-   fino 600 mobile
-   fino 700 tablet
-   fino 1000 desk */
-
 
 @media screen and (max-width: 549px){
     .hide-on-mobile{
@@ -377,9 +362,7 @@ h4 ~ span{
     .sidebar-lower-section li {
     text-align: center;
     }
-}  
-    
-    
+}    
 @media screen and (min-width: 550px){
     .container-sidebar{
         width: 200px;
@@ -430,6 +413,10 @@ h4 ~ span{
     h4{
         font-size: 12px;
     }
+    .left-section-img-song img{
+        max-width: 50px;
+        max-height: 50px;
+    }
 }
 @media screen and (min-width: 920px){
     .container-sidebar{
@@ -456,8 +443,7 @@ h4 ~ span{
         font-size: 13px;
     }
     h2{
-        font-size: 22px;
-        
+        font-size: 22px;   
     }
     .center-panel-control span{
         padding: 0px 10px;
@@ -470,6 +456,14 @@ h4 ~ span{
     .bar span{
         padding: 0px 8px;
         font-size: 14px;
-
+    }
+    .left-section-img-song img {
+        max-width: 60px;
+        max-height: 60px;
+    }
+    .left-section-icons .far{
+        display: inline-block;
+        font-size: 14px;
+        
     }
 }
